@@ -1,0 +1,365 @@
+*{
+  box-sizing: border-box;
+
+}
+body {
+  background-color: #fff;
+  color: #444;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*nav bar*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+  font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 15px 20px;
+  margin-right: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo a{
+  color: #fff
+}
+
+.main-nav a {
+	color: #fff;
+	font-size: .99em;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main-nav a:hover {
+	color: #f4f4f4;
+  background-color:#a2a2a2;
+}
+
+.header a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color:indianred;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;  
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;  
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+
+
+@keyframes mymove {
+  50% {box-shadow: 10px 20px 30px blue;}
+}
+
+/*hero*/
+
+.hero{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('https://miro.medium.com/v2/resize:fit:1400/0*HJtimmyfgd0m9nKz.jpg');  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  position: relative;
+
+
+  height: 50vh;
+
+
+
+
+  
+    
+}
+/*text of hero*/
+.hero h2 {
+  color: #f4f4f4;
+  text-transform: uppercase;
+  padding-top: 200px; /* Add desired margin value */
+  padding-bottom: 0.5em;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #16181b;
+  background: -webkit-linear-gradient(25deg,#ddd,#ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: type 1.5s steps(90) 1.5s 1 normal both, cursor 1s step-end infinite;
+  position: relative;
+
+}
+
+.hero p{
+
+  color: #fff;
+  animation: alternate-reverse;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*store location word*/
+
+.position{
+  background-color: #900c3f ;
+  margin-top: -30px;
+  margin-bottom: -10px;
+}
+
+.position h1 {
+  position: relative;
+  font-size: 6em;
+  letter-spacing:10px;
+  font-family: sans-serif;
+  display:table;
+  margin:10px auto;
+  cursor:pointer;
+  transition:.6s;
+  color: #ff5733;
+}
+.position h1:before,
+.position h1:after {
+  content:attr(data-text);
+  transition:.6s;
+}
+.position h1:before {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index:-1;
+  text-shadow:
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px;
+  -webkit-mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+          mask:repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+}
+.position h1:hover {
+  transform:translate(-10px,-10px);
+}  
+.position h1:hover:before {
+  text-shadow:
+   1px 1px,
+   2px 2px,
+   3px 3px,
+   4px 4px,
+   5px 5px,
+   6px 6px,
+   7px 7px,
+   8px 8px,
+   9px 9px,
+   10px 10px;
+}
+
+/*background fade*/
+
+.element {
+
+  width: 100%;
+  height: 50%;
+  animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #ffc350;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+
+/*store img & link*/
+
+div.gallery {
+  border: 5px solid #ccc;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  margin-top: 40%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+
+
+/*slide show for nike*/
+
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media (max-width: 600px) {
+
+  .grid-container  {
+
+    grid-template-areas: 
+
+      'header header header header header header' 
+
+      'left left left left left left' 
+
+      'middle middle middle middle middle middle' 
+
+      'right right right right right right' 
+
+      'footer footer footer footer footer footer';
+
+  }
+
+}
